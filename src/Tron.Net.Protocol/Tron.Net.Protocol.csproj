@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <Authors>griffo.io</Authors>
+    <PackageLicenseUrl>https://www.gnu.org/licenses/lgpl-3.0.txt</PackageLicenseUrl>
+    <Copyright>griffo.io</Copyright>
+    <PackageProjectUrl>https://github.com/griffo-io/tron.net</PackageProjectUrl>
+    <PackageIconUrl>https://raw.githubusercontent.com/griffo-io/tron.net/master/src/imgs/tron-logo.jpg</PackageIconUrl>
+    <RepositoryUrl>https://github.com/griffo-io/tron.net</RepositoryUrl>
+    <Version>1.0.1</Version>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Api\" />
+    <Folder Include="Core\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Google.Api.CommonProtos" Version="1.3.0" />
+    <PackageReference Include="Google.Protobuf.Tools" Version="3.5.1" />
+    <PackageReference Include="Grpc" Version="1.12.0" />
+    <PackageReference Include="Grpc.Tools" Version="1.12.0" />
+  </ItemGroup>
+
+  <Target Name="PreBuild" BeforeTargets="PreBuildEvent">
+    <Exec Command=":: $(ProjectDir)PreBuild\generate-classes-from-protofiles.cmd &quot;$(SolutionDir)&quot; &quot;$(ProjectDir)&quot; &quot;$(NuGetPackageRoot)&quot; 3.5.1 1.12.0 &quot;$(SolutionDir)requirements\protos&quot;" />
+  </Target>
+
+</Project>
