@@ -17,7 +17,7 @@ The latest stable release of the Tron.Net.Protocol [available on NuGet](https://
   
   or
  
- - You can download the Tron.Net.Protocol and create your own library to interact with the Tron Network using the Tron.Api.Grpc generated clients
+ - You can download the Tron.Net.Protocol and create your own library to interact with the Tron Network using the Tron.Net.Protocol.Api.Grpc generated clients
 
 # Examples
 
