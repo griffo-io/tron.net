@@ -1,14 +1,14 @@
 ﻿using System;
-using Tron.Net.Client.Grpc;
-using Tron.Net.Client.Test.Configuration;
 
-namespace Tron.Net.Client.Test
+using Tron.Net.Client.Grpc;
+using Tron.Net.Client.NetFrameworkRunnerTest.Configuration;
+
+namespace Tron.Net.Client.NetFrameworkRunnerTest
 {
     class Program
     {
         static void Main(string[] args)
-        {
-            var configuration = new JsonChannelConfiguration();
+        {var configuration = new AppSettingsChannelConfiguration();
             var grpcChanngelFactory = new GrpcGrpcChannelFactory(configuration);
             var walletClientFactory = new WalletClientFactory(grpcChanngelFactory, configuration);
             var wallet = new Wallet(walletClientFactory);
@@ -19,8 +19,6 @@ namespace Tron.Net.Client.Test
             {
                 Console.WriteLine($"Node: {node.Address}");    
             }
-
-            
         }
     }
 }

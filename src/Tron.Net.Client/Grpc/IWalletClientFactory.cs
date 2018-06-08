@@ -3,9 +3,9 @@ using Grpc.Core;
 
 namespace Tron.Net.Client.Grpc
 {
-    public interface IChannelFactory
+    public interface IWalletClientFactory
     {
-        Channel CreateChannel();
+        Protocol.Wallet.WalletClient Create();
 
         CallOptions GetCallOptions(CancellationToken cancellationToken);
 

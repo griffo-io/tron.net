@@ -1,8 +1,8 @@
 ﻿using System;
 using Tron.Net.Client.Grpc;
-using Tron.Net.Client.Test.Configuration;
+using Tron.Net.Client.NetCoreRunnerTest.Configuration;
 
-namespace Tron.Net.Client.Test
+namespace Tron.Net.Client.NetCoreRunnerTest
 {
     class Program
     {

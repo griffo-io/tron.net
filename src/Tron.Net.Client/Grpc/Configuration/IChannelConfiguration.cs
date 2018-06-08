@@ -10,6 +10,6 @@ namespace Tron.Net.Client.Grpc.Configuration
 
         int? MaxConcurrentStreams { get; }
 
-        TimeSpan TimeOutMs { get; }
+        TimeSpan? TimeOutMs { get; }
     }
 }
