@@ -12,9 +12,12 @@ The latest stable release of the Tron.Net.Protocol [available on NuGet](https://
 # How to use it
 
   - You can download the Tron.Net.Client package, implement the `IChannelConfiguration` interface, and use the implementation of the different services avaiable:
-  -- `IWallet`
+ 
+ -- `IWallet`
+  
   or
-  - You can download the Tron.Net.Protocol and create your own library to interact with the Tron Network using the Tron.Api.Grpc generated clients
+ 
+ - You can download the Tron.Net.Protocol and create your own library to interact with the Tron Network using the Tron.Api.Grpc generated clients
 
 # Examples
 
