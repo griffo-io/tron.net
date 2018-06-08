@@ -1,5 +1,6 @@
 ﻿using System;
 using Tron.Net.Client.Grpc;
+using Tron.Net.Client.Grpc.Configuration;
 using Tron.Net.Client.NetCoreRunnerTest.Configuration;
 
 namespace Tron.Net.Client.NetCoreRunnerTest
@@ -10,8 +11,8 @@ namespace Tron.Net.Client.NetCoreRunnerTest
         {
             var configuration = new JsonChannelConfiguration();
             var grpcChanngelFactory = new GrpcGrpcChannelFactory(configuration);
-            var walletClientFactory = new WalletClientFactory(grpcChanngelFactory, configuration);
-            var wallet = new Wallet(walletClientFactory);
+            var walletClientFactory = new WalletClientFactory(grpcChanngelFactory);
+            var wallet = new Wallet(walletClientFactory, new AllClientsDefaultCallConfiguration());
 
             var nodes = wallet.ListNodesAsync().GetAwaiter().GetResult();
 

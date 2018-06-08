@@ -1,5 +1,4 @@
-﻿using System.Threading;
-using Grpc.Core;
+﻿using Grpc.Core;
 
 namespace Tron.Net.Client.Grpc
 {
