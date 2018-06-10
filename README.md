@@ -44,3 +44,4 @@ Tron.Net.Client is built upon the premise of flexibility, so the following inter
 
 If using a DI framework like Autofac with assembly discovery, make sure to override the registration of `AllClientsDefaultCallConfiguration` which has a 10 seconds timeout by default
 
+Logo Provided by [Vecteezy](https://vecteezy.com)
