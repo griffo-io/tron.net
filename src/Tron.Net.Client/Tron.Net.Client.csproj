@@ -18,6 +18,8 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Tron.Net.Common\Tron.Net.Common.csproj" />
+    <ProjectReference Include="..\Tron.Net.Crypto\Tron.Net.Crypto.csproj" />
     <ProjectReference Include="..\Tron.Net.Protocol\Tron.Net.Protocol.csproj" />
   </ItemGroup>
 

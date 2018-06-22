@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tron.Net.Client.NetFramewor
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tron.Net.Crypto", "src\Tron.Net.Crypto\Tron.Net.Crypto.csproj", "{00E7F608-8F47-4D98-83F3-92FE4BBCFB78}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tron.Net.Common", "src\Tron.Net.Common\Tron.Net.Common.csproj", "{4D50C3A0-5922-40B7-A5F4-09ABA02E7F2B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -43,6 +45,10 @@ Global
 		{00E7F608-8F47-4D98-83F3-92FE4BBCFB78}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{00E7F608-8F47-4D98-83F3-92FE4BBCFB78}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{00E7F608-8F47-4D98-83F3-92FE4BBCFB78}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4D50C3A0-5922-40B7-A5F4-09ABA02E7F2B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D50C3A0-5922-40B7-A5F4-09ABA02E7F2B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D50C3A0-5922-40B7-A5F4-09ABA02E7F2B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D50C3A0-5922-40B7-A5F4-09ABA02E7F2B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
