@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
+  <metadata>
+    <id>Tron.Net.Protocol</id>
+    <version>1.1.3</version>
+    <authors>griffo.io</authors>
+    <owners>griffo.io</owners>
+    <tags>Tron</tags>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <licenseUrl>https://www.gnu.org/licenses/lgpl-3.0.txt</licenseUrl>
+    <projectUrl>https://github.com/griffo-io/tron.net</projectUrl>
+    <iconUrl>https://raw.githubusercontent.com/griffo-io/tron.net/master/src/imgs/tron-logo.jpg</iconUrl>
+    <description>Package Description</description>
+    <copyright>griffo.io</copyright>
+    <repository url="https://github.com/griffo-io/tron.net" />
+    <dependencies>
+      <group targetFramework=".NETFramework4.5">
+        <dependency id="Google.Api.CommonProtos" version="1.3.0" exclude="Build,Analyzers" />
+        <dependency id="Google.Protobuf.Tools" version="3.5.1" exclude="Build,Analyzers" />
+        <dependency id="Grpc" version="1.12.0" exclude="Build,Analyzers" />
+        <dependency id="Grpc.Tools" version="1.12.0" exclude="Build,Analyzers" />
+      </group>
+      <group targetFramework=".NETStandard2.0">
+        <dependency id="Google.Api.CommonProtos" version="1.3.0" exclude="Build,Analyzers" />
+        <dependency id="Google.Protobuf.Tools" version="3.5.1" exclude="Build,Analyzers" />
+        <dependency id="Grpc" version="1.12.0" exclude="Build,Analyzers" />
+        <dependency id="Grpc.Tools" version="1.12.0" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="bin\Release\net45\Tron*.dll" target="lib\net45"  />
+    <file src="bin\Release\netstandard2.0\Tron*.dll" target="lib\netstandard2.0"  />
+  </files>
+</package>

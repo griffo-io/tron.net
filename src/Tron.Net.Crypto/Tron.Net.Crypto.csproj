@@ -2,6 +2,16 @@
 
   <PropertyGroup>
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
+    <Version>0.5.0</Version>
+    <Authors>griffo.io</Authors>
+    <Company>griffo.io</Company>
+    <Product>Tron.Net</Product>
+    <Copyright>griffo.io</Copyright>
+    <PackageLicenseUrl>https://www.gnu.org/licenses/lgpl-3.0.txt</PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/griffo-io/tron.net</PackageProjectUrl>
+    <PackageIconUrl>https://raw.githubusercontent.com/griffo-io/tron.net/master/src/imgs/tron-logo.jpg</PackageIconUrl>
+    <RepositoryUrl>https://github.com/griffo-io/tron.net</RepositoryUrl>
+    <Description>Cryptographic algorithms used in Tron.Net</Description>
   </PropertyGroup>
 
   <ItemGroup>
@@ -9,7 +19,21 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Tron.Net.Common\Tron.Net.Common.csproj" />
+    <ProjectReference Include="..\Tron.Net.Common\Tron.Net.Common.csproj">
+      <Private>true</Private>
+    </ProjectReference>
+  </ItemGroup>
+
+  <ItemGroup Condition="'$(TargetFramework)' == 'netstandard2.0'">
+    <PackageReference Include="SHA3">
+      <Version>1.0.0-rc</Version>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="SHA3\SHA3-license.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 </Project>

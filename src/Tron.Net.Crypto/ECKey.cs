@@ -17,7 +17,7 @@ namespace Tron.Net.Crypto
         private static readonly SecureRandom SecureRandom;
         private static readonly X9ECParameters Params;
 
-        private readonly ECPoint _pub;
+        public ECPoint Pub { get; }
         private readonly ECPrivateKeyParameters _privateKey;
 
 
@@ -35,7 +35,7 @@ namespace Tron.Net.Crypto
             var generator = new ECKeyPairGenerator();
             generator.Init(new ECKeyGenerationParameters(parameters, SecureRandom));
             var pair = generator.GenerateKeyPair();
-            _pub = ((ECPublicKeyParameters)pair.Public).Q;
+            Pub = ((ECPublicKeyParameters)pair.Public).Q;
             _privateKey = (ECPrivateKeyParameters)pair.Private;
         }
 
@@ -43,7 +43,7 @@ namespace Tron.Net.Crypto
         public ECKey(BigInteger privateKey, ECPoint publicPoint)
         {
             _privateKey = new ECPrivateKeyParameters(new BigInteger(privateKey.ToString()), Curve);
-            _pub = publicPoint;
+            Pub = publicPoint;
 
         }
 
@@ -59,7 +59,7 @@ namespace Tron.Net.Crypto
 
         public static ECKey FromPrivateHexString(string privateKeyStr)
         {
-            var bytes = privateKeyStr.ToByteArray();
+            var bytes = privateKeyStr.FromHexToByteArray();
             return FromPrivate(new BigInteger(1, bytes));
         }
     }

@@ -15,9 +15,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tron.Net.Client.NetCoreRunn
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tron.Net.Client.NetFrameworkRunnerTest", "tools\Tron.Net.Client.NetFrameworkRunnerTest\Tron.Net.Client.NetFrameworkRunnerTest.csproj", "{3A02A235-5FB4-42AB-A926-70C5F63410F1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tron.Net.Crypto", "src\Tron.Net.Crypto\Tron.Net.Crypto.csproj", "{00E7F608-8F47-4D98-83F3-92FE4BBCFB78}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tron.Net.Crypto", "src\Tron.Net.Crypto\Tron.Net.Crypto.csproj", "{00E7F608-8F47-4D98-83F3-92FE4BBCFB78}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tron.Net.Common", "src\Tron.Net.Common\Tron.Net.Common.csproj", "{4D50C3A0-5922-40B7-A5F4-09ABA02E7F2B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tron.Net.Common", "src\Tron.Net.Common\Tron.Net.Common.csproj", "{4D50C3A0-5922-40B7-A5F4-09ABA02E7F2B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tron.Net.Crypto.Tests", "tests\Tron.Net.Crypto.Tests\Tron.Net.Crypto.Tests.csproj", "{D6F1DE4E-B3B0-4D7A-A9F1-07EB3F03AC82}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tron.Net.Common.Tests", "tests\Tron.Net.Common.Tests\Tron.Net.Common.Tests.csproj", "{0C118D6E-ADDF-4AF4-ADD3-2F018E2A38D8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -49,6 +53,14 @@ Global
 		{4D50C3A0-5922-40B7-A5F4-09ABA02E7F2B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4D50C3A0-5922-40B7-A5F4-09ABA02E7F2B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4D50C3A0-5922-40B7-A5F4-09ABA02E7F2B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D6F1DE4E-B3B0-4D7A-A9F1-07EB3F03AC82}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D6F1DE4E-B3B0-4D7A-A9F1-07EB3F03AC82}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D6F1DE4E-B3B0-4D7A-A9F1-07EB3F03AC82}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D6F1DE4E-B3B0-4D7A-A9F1-07EB3F03AC82}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0C118D6E-ADDF-4AF4-ADD3-2F018E2A38D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0C118D6E-ADDF-4AF4-ADD3-2F018E2A38D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0C118D6E-ADDF-4AF4-ADD3-2F018E2A38D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0C118D6E-ADDF-4AF4-ADD3-2F018E2A38D8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -56,6 +68,8 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{B245F8A6-BD02-4408-B84E-44879970457A} = {ECDF1AC9-83D7-454E-BE27-42BD76260609}
 		{3A02A235-5FB4-42AB-A926-70C5F63410F1} = {ECDF1AC9-83D7-454E-BE27-42BD76260609}
+		{D6F1DE4E-B3B0-4D7A-A9F1-07EB3F03AC82} = {0C85F63B-E0B2-4CCB-A947-EC852231C629}
+		{0C118D6E-ADDF-4AF4-ADD3-2F018E2A38D8} = {0C85F63B-E0B2-4CCB-A947-EC852231C629}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {DD2B6DE2-B6C4-4792-B753-AF7F47959414}

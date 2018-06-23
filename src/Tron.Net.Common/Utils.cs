@@ -5,7 +5,7 @@ namespace Tron.Net.Common
 {
     public static class Utils
     {
-        public static string ToString(this byte[] bytes)
+        public static string ToHexString(this byte[] bytes)
         {
             var hex = new StringBuilder(bytes.Length * 2);
             foreach (var b in bytes)
@@ -16,13 +16,13 @@ namespace Tron.Net.Common
         }
 
 
-        public static byte[] ToByteArray(this string hex)
+        public static byte[] FromHexToByteArray(this string input)
         {
-            var numberChars = hex.Length;
+            var numberChars = input.Length;
             var bytes = new byte[numberChars / 2];
             for (var i = 0; i < numberChars; i += 2)
             {
-                bytes[i / 2] = Convert.ToByte(hex.Substring(i, 2), 16);
+                bytes[i / 2] = Convert.ToByte(input.Substring(i, 2), 16);
             }
             return bytes;
         }

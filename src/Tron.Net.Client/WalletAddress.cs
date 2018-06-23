@@ -1,17 +1,19 @@
 ﻿using System;
+using System.Linq;
 using Tron.Net.Common;
 using Tron.Net.Crypto;
+using Tron.Net.Crypto.SHA3;
 
 namespace Tron.Net.Client
 {
     public sealed class WalletAddress
     {
-        private readonly byte _addressPrefix;
-        private const byte AddPreFixByteMainnet = (byte)0x41;   //41 + address
-        private const byte AddPreFixByteTestnet = (byte)0xa0;   //a0 + address
-        private const byte AddressSize = 21;
-
-        private static string Encode58Check(byte[] input) {
+        private readonly string _addressPrefix;
+        private const string AddPreFixByteMainnet = "41";   //41 + address
+        private const string AddPreFixByteTestnet = "a0";   //a0 + address
+        
+        private static string Encode58Check(byte[] input)
+        {
             var hash0 = Sha256.Hash(input);
             var hash1 = Sha256.Hash(hash0);
             var inputCheck = new byte[input.Length + 4];
@@ -45,53 +47,47 @@ namespace Tron.Net.Client
             return null;
         }
 
-        internal WalletAddress(string address, byte prefix)
+        internal WalletAddress(ECKey key, string prefix)
         {
-            if (string.IsNullOrEmpty(address))
+            if (key == null)
             {
-                throw new ArgumentNullException(nameof(address));
+                throw new ArgumentNullException(nameof(key));
             }
 
-            Value = Decode58Check(address);
+            Value = key.Pub.GetEncoded().ToArray();
             _addressPrefix = prefix;
         }
 
-        public static WalletAddress MainNetWalletAddress(string address)
+        public static WalletAddress MainNetWalletAddress(ECKey key = null)
         {
-            return new WalletAddress(address, AddPreFixByteMainnet);
+            return new WalletAddress(key ?? new ECKey(), AddPreFixByteMainnet);
         }
 
-        public static WalletAddress TestNetWalletAddress(string address)
+        public static WalletAddress TestNetWalletAddress(ECKey key = null)
         {
-            return new WalletAddress(address, AddPreFixByteTestnet);
+            return new WalletAddress(key ?? new ECKey(), AddPreFixByteTestnet);
         }
 
-        public bool Valid()
-        {
-            if (Value == null)
-            {
-                return false;
-            }
-            if (Value.Length != AddressSize)
-            {
-                return false;
-            }
-            var preFixbyte = Value[0];
-
-            if (preFixbyte != _addressPrefix)
-            {
-                return false;
-            }
-
-            //Future rules;
-            return true;
-        }
-        
         public override string ToString()
         {
-            return Encode58Check(Value);
+            var sha3Hash = Sha3.Sha3256().ComputeHash(Value);
+            var sha3HashBytes = new byte[20];
+            Array.Copy(sha3Hash, sha3Hash.Length - 20, sha3HashBytes, 0, 20);
+            var address = _addressPrefix + sha3HashBytes.ToHexString();
+            var hexToByteArray = address.FromHexToByteArray();
+            var hash = Sha256.HashTwice(hexToByteArray);
+            var bytes = new byte[4];
+            Array.Copy(hash, bytes, 4);
+            var checksum = bytes.ToHexString();
+            var addChecksum = (address + checksum).FromHexToByteArray();
+            Array.Copy(hexToByteArray, addChecksum, hexToByteArray.Length);
+            return Base58.Encode(addChecksum);
         }
 
         public byte[] Value { get; }
+
+        public bool IsTestNet => _addressPrefix == AddPreFixByteTestnet;
+
+        public bool IsMainNet => _addressPrefix == AddPreFixByteMainnet;
     }
 }
