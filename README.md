@@ -1,3 +1,5 @@
+[![Build status](https://ci.appveyor.com/api/projects/status/6a01tofdfbrrlrsf?svg=true)](https://ci.appveyor.com/project/dariogriffo/tron-net)
+
 # tron.net
 
 [![N|Solid](https://avatars2.githubusercontent.com/u/39886363?s=200&v=4)](https://github.com/griffo-io/tron.net)
