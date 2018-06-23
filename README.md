@@ -1,4 +1,7 @@
 [![Build status](https://ci.appveyor.com/api/projects/status/6a01tofdfbrrlrsf?svg=true)](https://ci.appveyor.com/project/dariogriffo/tron-net)
+[![NuGet](https://img.shields.io/nuget/v/griffo-io.svg?style=flat)](https://www.nuget.org/packages/Tron.Net.Client/) 
+[![GitHub license](https://img.shields.io/github/license/griffo-io/tron.net.svg)](https://github.com/griffo-io/tron.net/blob/master/LICENSE)
+
 
 # tron.net
 
