@@ -1,14 +1,14 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
+    <TargetFrameworks>net45;net46;netstandard2.0</TargetFrameworks>
     <Authors>griffo.io</Authors>
     <PackageLicenseUrl>https://www.gnu.org/licenses/lgpl-3.0.txt</PackageLicenseUrl>
     <Copyright>griffo.io</Copyright>
     <PackageProjectUrl>https://github.com/griffo-io/tron.net</PackageProjectUrl>
     <PackageIconUrl>https://raw.githubusercontent.com/griffo-io/tron.net/master/src/imgs/tron-logo.jpg</PackageIconUrl>
     <RepositoryUrl>https://github.com/griffo-io/tron.net</RepositoryUrl>
-    <Version>1.1.2</Version>
+    <Version>1.2.0</Version>
   </PropertyGroup>
 
   <ItemGroup>

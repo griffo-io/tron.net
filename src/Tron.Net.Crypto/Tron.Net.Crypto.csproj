@@ -1,8 +1,8 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
-    <Version>0.5.0</Version>
+    <TargetFrameworks>net45;net46;netstandard2.0</TargetFrameworks>
+    <Version>0.6.0</Version>
     <Authors>griffo.io</Authors>
     <Company>griffo.io</Company>
     <Product>Tron.Net</Product>
@@ -16,6 +16,7 @@
 
   <ItemGroup>
     <PackageReference Include="Portable.BouncyCastle" Version="1.8.2" />
+    <PackageReference Include="SHA3.Net" Version="1.1.0" />
   </ItemGroup>
 
   <ItemGroup>
@@ -28,12 +29,6 @@
     <PackageReference Include="SHA3">
       <Version>1.0.0-rc</Version>
     </PackageReference>
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Update="SHA3\SHA3-license.txt">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
   </ItemGroup>
 
 </Project>

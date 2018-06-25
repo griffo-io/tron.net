@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Linq;
+using SHA3.Net;
 using Tron.Net.Common;
 using Tron.Net.Crypto;
-using Tron.Net.Crypto.SHA3;
 
 namespace Tron.Net.Client
 {

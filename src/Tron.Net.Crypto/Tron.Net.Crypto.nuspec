@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
   <metadata>
     <id>Tron.Net.Crypto</id>
-    <version>0.5.0</version>
+    <version>0.6.0</version>
     <authors>griffo.io</authors>
     <owners>griffo.io</owners>
     <tags>Tron</tags>
@@ -13,17 +13,25 @@
     <description>Cryptographic algorithms used in Tron.Net</description>
     <copyright>griffo.io</copyright>
     <repository url="https://github.com/griffo-io/tron.net" />
+    <releaseNotes>Added support for .NET framework 4.6. Fixed SHA3 library</releaseNotes>
     <dependencies>
       <group targetFramework=".NETFramework4.5">
         <dependency id="Portable.BouncyCastle" version="1.8.2" exclude="Build,Analyzers" />
+        <dependency id="SHA3.Net" version="1.1.0" exclude="Build,Analyzers" />
+      </group>
+      <group targetFramework=".NETFramework4.6">
+        <dependency id="Portable.BouncyCastle" version="1.8.2" exclude="Build,Analyzers" />
+        <dependency id="SHA3.Net" version="1.1.0" exclude="Build,Analyzers" />
       </group>
       <group targetFramework=".NETStandard2.0">
         <dependency id="Portable.BouncyCastle" version="1.8.2" exclude="Build,Analyzers" />
+        <dependency id="SHA3.Net" version="1.1.0" exclude="Build,Analyzers" />
       </group>
     </dependencies>
   </metadata>
   <files>
     <file src="bin\Release\net45\Tron*.dll" target="lib\net45"  />
+    <file src="bin\Release\net46\Tron*.dll" target="lib\net46"  />
     <file src="bin\Release\netstandard2.0\Tron*.dll" target="lib\netstandard2.0"  />
   </files>
 </package>
