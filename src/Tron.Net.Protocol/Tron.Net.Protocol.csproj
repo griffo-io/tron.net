@@ -8,7 +8,7 @@
     <PackageProjectUrl>https://github.com/griffo-io/tron.net</PackageProjectUrl>
     <PackageIconUrl>https://raw.githubusercontent.com/griffo-io/tron.net/master/src/imgs/tron-logo.jpg</PackageIconUrl>
     <RepositoryUrl>https://github.com/griffo-io/tron.net</RepositoryUrl>
-    <Version>1.2.0</Version>
+    <Version>1.2.1</Version>
   </PropertyGroup>
 
   <ItemGroup>
