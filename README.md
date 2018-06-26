@@ -33,7 +33,7 @@ The latest stable release of the Tron.Net.Protocol [available on NuGet](https://
  
 # Crypto
 
-[BouncyCastle](https://www.bouncycastle.org/csharp/index.html) is used as library to generate all hashes, the underlying decision on this is: it works, is fast, is reliable.
+[BouncyCastle](https://www.bouncycastle.org/csharp/index.html) is used as library to generate all hashes, the underlying decision on this is: **it works, is fast, is reliable.**
 
 In order to create a new Address an ECKey must be created, make sure you store that, since at this moment there is no plan to provide a store for generated keys.
 
