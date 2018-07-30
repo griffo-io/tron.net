@@ -1439,7 +1439,7 @@ namespace Tron.Net.Protocol {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public acuthrity(acuthrity other) : this() {
-      Account = other.account_ != null ? other.Account.Clone() : null;
+      account_ = other.account_ != null ? other.account_.Clone() : null;
       permissionName_ = other.permissionName_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -1605,7 +1605,7 @@ namespace Tron.Net.Protocol {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public permision(permision other) : this() {
-      Account = other.account_ != null ? other.Account.Clone() : null;
+      account_ = other.account_ != null ? other.account_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -2425,7 +2425,7 @@ namespace Tron.Net.Protocol {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public TXInput(TXInput other) : this() {
-      RawData = other.rawData_ != null ? other.RawData.Clone() : null;
+      rawData_ = other.rawData_ != null ? other.rawData_.Clone() : null;
       signature_ = other.signature_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -2901,7 +2901,7 @@ namespace Tron.Net.Protocol {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public Transaction(Transaction other) : this() {
-      RawData = other.rawData_ != null ? other.RawData.Clone() : null;
+      rawData_ = other.rawData_ != null ? other.rawData_.Clone() : null;
       signature_ = other.signature_.Clone();
       ret_ = other.ret_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -3082,7 +3082,7 @@ namespace Tron.Net.Protocol {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public Contract(Contract other) : this() {
           type_ = other.type_;
-          Parameter = other.parameter_ != null ? other.Parameter.Clone() : null;
+          parameter_ = other.parameter_ != null ? other.parameter_.Clone() : null;
           provider_ = other.provider_;
           contractName_ = other.contractName_;
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -3971,7 +3971,7 @@ namespace Tron.Net.Protocol {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public BlockHeader(BlockHeader other) : this() {
-      RawData = other.rawData_ != null ? other.RawData.Clone() : null;
+      rawData_ = other.rawData_ != null ? other.rawData_.Clone() : null;
       witnessSignature_ = other.witnessSignature_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -4418,7 +4418,7 @@ namespace Tron.Net.Protocol {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public Block(Block other) : this() {
       transactions_ = other.transactions_.Clone();
-      BlockHeader = other.blockHeader_ != null ? other.BlockHeader.Clone() : null;
+      blockHeader_ = other.blockHeader_ != null ? other.blockHeader_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -5832,12 +5832,12 @@ namespace Tron.Net.Protocol {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public HelloMessage(HelloMessage other) : this() {
-      From = other.from_ != null ? other.From.Clone() : null;
+      from_ = other.from_ != null ? other.from_.Clone() : null;
       version_ = other.version_;
       timestamp_ = other.timestamp_;
-      GenesisBlockId = other.genesisBlockId_ != null ? other.GenesisBlockId.Clone() : null;
-      SolidBlockId = other.solidBlockId_ != null ? other.SolidBlockId.Clone() : null;
-      HeadBlockId = other.headBlockId_ != null ? other.HeadBlockId.Clone() : null;
+      genesisBlockId_ = other.genesisBlockId_ != null ? other.genesisBlockId_.Clone() : null;
+      solidBlockId_ = other.solidBlockId_ != null ? other.solidBlockId_.Clone() : null;
+      headBlockId_ = other.headBlockId_ != null ? other.headBlockId_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 

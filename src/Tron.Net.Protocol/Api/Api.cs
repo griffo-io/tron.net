@@ -181,11 +181,9 @@ namespace Tron.Net.Protocol {
             "c2FnZRobLnByb3RvY29sLkR5bmFtaWNQcm9wZXJ0aWVzIgASOAoLR2V0Tm93",
             "QmxvY2sSFi5wcm90b2NvbC5FbXB0eU1lc3NhZ2UaDy5wcm90b2NvbC5CbG9j",
             "ayIAEjsKDUdldEJsb2NrQnlOdW0SFy5wcm90b2NvbC5OdW1iZXJNZXNzYWdl",
-            "Gg8ucHJvdG9jb2wuQmxvY2siADJDCgdOZXR3b3JrEjgKBFRvRG8SFi5wcm90",
-            "b2NvbC5FbXB0eU1lc3NhZ2UaFi5wcm90b2NvbC5FbXB0eU1lc3NhZ2UiAEJV",
-            "CgxvcmcudHJvbi5hcGlCB0dycGNBUElaKGdpdGh1Yi5jb20vdHJvbnByb3Rv",
-            "Y29sL2dycGMtZ2F0ZXdheS9hcGmqAhFUcm9uLk5ldC5Qcm90b2NvbGIGcHJv",
-            "dG8z"));
+            "Gg8ucHJvdG9jb2wuQmxvY2siADIJCgdOZXR3b3JrQlUKDG9yZy50cm9uLmFw",
+            "aUIHR3JwY0FQSVooZ2l0aHViLmNvbS90cm9ucHJvdG9jb2wvZ3JwYy1nYXRl",
+            "d2F5L2FwaaoCEVRyb24uTmV0LlByb3RvY29sYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Tron.Net.Protocol.TronReflection.Descriptor, global::Tron.Net.Protocol.ContractReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
@@ -1215,7 +1213,7 @@ namespace Tron.Net.Protocol {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public Node(Node other) : this() {
-      Address = other.address_ != null ? other.Address.Clone() : null;
+      address_ = other.address_ != null ? other.address_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -2340,7 +2338,7 @@ namespace Tron.Net.Protocol {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public AccountPaginated(AccountPaginated other) : this() {
-      Account = other.account_ != null ? other.Account.Clone() : null;
+      account_ = other.account_ != null ? other.account_.Clone() : null;
       offset_ = other.offset_;
       limit_ = other.limit_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -2531,7 +2529,7 @@ namespace Tron.Net.Protocol {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public TimePaginatedMessage(TimePaginatedMessage other) : this() {
-      TimeMessage = other.timeMessage_ != null ? other.TimeMessage.Clone() : null;
+      timeMessage_ = other.timeMessage_ != null ? other.timeMessage_.Clone() : null;
       offset_ = other.offset_;
       limit_ = other.limit_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);

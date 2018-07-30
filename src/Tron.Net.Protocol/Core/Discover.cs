@@ -262,8 +262,8 @@ namespace Tron.Net.Protocol {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public PingMessage(PingMessage other) : this() {
-      From = other.from_ != null ? other.From.Clone() : null;
-      To = other.to_ != null ? other.To.Clone() : null;
+      from_ = other.from_ != null ? other.from_.Clone() : null;
+      to_ = other.to_ != null ? other.to_.Clone() : null;
       version_ = other.version_;
       timestamp_ = other.timestamp_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -487,7 +487,7 @@ namespace Tron.Net.Protocol {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public PongMessage(PongMessage other) : this() {
-      From = other.from_ != null ? other.From.Clone() : null;
+      from_ = other.from_ != null ? other.from_.Clone() : null;
       echo_ = other.echo_;
       timestamp_ = other.timestamp_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -678,7 +678,7 @@ namespace Tron.Net.Protocol {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public FindNeighbours(FindNeighbours other) : this() {
-      From = other.from_ != null ? other.From.Clone() : null;
+      from_ = other.from_ != null ? other.from_.Clone() : null;
       targetId_ = other.targetId_;
       timestamp_ = other.timestamp_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -869,7 +869,7 @@ namespace Tron.Net.Protocol {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public Neighbours(Neighbours other) : this() {
-      From = other.from_ != null ? other.From.Clone() : null;
+      from_ = other.from_ != null ? other.from_.Clone() : null;
       neighbours_ = other.neighbours_.Clone();
       timestamp_ = other.timestamp_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);

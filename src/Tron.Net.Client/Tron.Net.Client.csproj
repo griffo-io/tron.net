@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFrameworks>net45;net46;netstandard2.0</TargetFrameworks>
-    <Version>0.6.1</Version>
+    <Version>0.6.3</Version>
     <Authors>griffo.io</Authors>
     <Company>griffo.io</Company>
     <Product>Tron.Net</Product>
@@ -11,10 +11,11 @@
     <PackageProjectUrl>https://github.com/griffo-io/tron.net</PackageProjectUrl>
     <PackageIconUrl>https://raw.githubusercontent.com/griffo-io/tron.net/master/src/imgs/tron-logo.jpg</PackageIconUrl>
     <RepositoryUrl>https://github.com/griffo-io/tron.net</RepositoryUrl>
+    <PackageReleaseNotes>Updated Protocol reference</PackageReleaseNotes>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Grpc.Core" Version="1.12.0" />
+    <PackageReference Include="Grpc.Core" Version="1.13.1" />
   </ItemGroup>
 
   <ItemGroup>

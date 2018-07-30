@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
   <metadata>
     <id>Tron.Net.Protocol</id>
-    <version>1.2.1</version>
+    <version>1.2.2</version>
     <authors>griffo.io</authors>
     <owners>griffo.io</owners>
     <tags>Tron</tags>
@@ -13,7 +13,7 @@
     <description>Tron Protocol GRPC calls</description>
     <copyright>griffo.io</copyright>
     <repository url="https://github.com/griffo-io/tron.net" />
-    <releaseNotes>Added support for .NET framework 4.6</releaseNotes>
+    <releaseNotes>Updated dependencies version</releaseNotes>
     <dependencies>
       <group targetFramework=".NETFramework4.5">
         <dependency id="Google.Api.CommonProtos" version="1.3.0" exclude="Build,Analyzers" />
