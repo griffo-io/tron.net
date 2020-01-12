@@ -1,9 +1,0 @@
-[submodule "requirements/protos/tronprotocol"]
-	path = requirements/protos/tronprotocol
-	url = https://github.com/tronprotocol/protocol
-[submodule "requirements/protos/googleapis"]
-	path = requirements/protos/googleapis
-	url = https://github.com/googleapis/googleapis
-[submodule "requirements/protos/protobuf"]
-	path = requirements/protos/protobuf
-	url = https://github.com/google/protobuf
