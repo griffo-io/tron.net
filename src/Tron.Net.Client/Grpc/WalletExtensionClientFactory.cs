@@ -2,18 +2,16 @@
 {
     public class WalletExtensionClientFactory : IWalletExtensionClientFactory
     {
-        private readonly IGrpcChannelFactory _grpcChannelFactory;
+        private readonly IGrpcChannelFactory _channelFactory;
 
-        public WalletExtensionClientFactory(IGrpcChannelFactory grpcChannelFactory)
+        public WalletExtensionClientFactory(IGrpcChannelFactory channelFactory)
         {
-            _grpcChannelFactory = grpcChannelFactory;
+            _channelFactory = channelFactory;
         }
 
         public Protocol.WalletExtension.WalletExtensionClient Create()
         {
-            return new Protocol.WalletExtension.WalletExtensionClient(_grpcChannelFactory.Create());
+            return new Protocol.WalletExtension.WalletExtensionClient(_channelFactory.Create());
         }
-
-
     }
 }

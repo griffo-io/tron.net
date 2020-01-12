@@ -1,11 +1,11 @@
-﻿using System.Threading;
-using System.Threading.Tasks;
-using Tron.Net.Client.Grpc;
-using Tron.Net.Client.Grpc.Configuration;
-using Tron.Net.Protocol;
-
-namespace Tron.Net.Client
+﻿namespace Tron.Net.Client
 {
+    using System.Threading;
+    using System.Threading.Tasks;
+    using Tron.Net.Client.Grpc;
+    using Tron.Net.Client.Grpc.Configuration;
+    using Tron.Net.Protocol;
+
     public class WalletSolidity : IWalletSolidity
     {
         private readonly IWalletSolidityClientFactory _clientFactory;
@@ -23,31 +23,31 @@ namespace Tron.Net.Client
             return _clientFactory.Create();
         }
 
-        public async Task<Account> GetAccountAsync(Account account, CancellationToken token = default(CancellationToken))
+        public async Task<Account> GetAccountAsync(Account account, CancellationToken token = default)
         {
             var walletSolidity = GetWalletSolidity();
             return await walletSolidity.GetAccountAsync(account, _configuration.GetCallOptions(token));
         }
 
-        public async Task<WitnessList> ListWitnessesAsync(CancellationToken token = default(CancellationToken))
+        public async Task<WitnessList> ListWitnessesAsync(CancellationToken token = default)
         {
             var walletSolidity = GetWalletSolidity();
             return await walletSolidity.ListWitnessesAsync(new EmptyMessage(), _configuration.GetCallOptions(token));
         }
 
-        public async Task<AssetIssueList> GetAssetIssueListAsync(CancellationToken token = default(CancellationToken))
+        public async Task<AssetIssueList> GetAssetIssueListAsync(CancellationToken token = default)
         {
             var walletSolidity = GetWalletSolidity();
             return await walletSolidity.GetAssetIssueListAsync(new EmptyMessage(), _configuration.GetCallOptions(token));
         }
 
-        public async Task<Block> GetNowBlockAsync(CancellationToken token = default(CancellationToken))
+        public async Task<Block> GetNowBlockAsync(CancellationToken token = default)
         {
             var walletSolidity = GetWalletSolidity();
             return await walletSolidity.GetNowBlockAsync(new EmptyMessage(), _configuration.GetCallOptions(token));
         }
 
-        public async Task<Block> GetBlockByNumAsync(NumberMessage message, CancellationToken token = default(CancellationToken))
+        public async Task<Block> GetBlockByNumAsync(NumberMessage message, CancellationToken token = default)
         {
             var walletSolidity = GetWalletSolidity();
             return await walletSolidity.GetBlockByNumAsync(message, _configuration.GetCallOptions(token));

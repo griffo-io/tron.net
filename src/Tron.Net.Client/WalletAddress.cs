@@ -1,11 +1,11 @@
-﻿using System;
-using System.Linq;
-using SHA3.Net;
-using Tron.Net.Common;
-using Tron.Net.Crypto;
-
-namespace Tron.Net.Client
+﻿namespace Tron.Net.Client
 {
+    using System;
+    using System.Linq;
+    using SHA3.Net;
+    using Tron.Net.Common;
+    using Tron.Net.Crypto;
+
     public sealed class WalletAddress
     {
         private readonly string _addressPrefix;

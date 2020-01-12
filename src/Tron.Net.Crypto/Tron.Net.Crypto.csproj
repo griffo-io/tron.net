@@ -1,11 +1,11 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>net45;net46;netstandard2.0</TargetFrameworks>
-    <Version>0.6.0</Version>
+    <TargetFrameworks>net45;net46;netstandard2.0;netstandard2.1</TargetFrameworks>
+    <Version>0.7.0</Version>
     <Authors>griffo.io</Authors>
     <Company>griffo.io</Company>
-    <Product>Tron.Net</Product>
+    <Product>Tron.Net.Crypto</Product>
     <Copyright>griffo.io</Copyright>
     <PackageLicenseUrl>https://www.gnu.org/licenses/lgpl-3.0.txt</PackageLicenseUrl>
     <PackageProjectUrl>https://github.com/griffo-io/tron.net</PackageProjectUrl>
@@ -15,8 +15,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Portable.BouncyCastle" Version="1.8.2" />
-    <PackageReference Include="SHA3.Net" Version="1.1.0" />
+    <PackageReference Include="Portable.BouncyCastle" Version="1.8.5.2" />
+    <PackageReference Include="SHA3.Net" Version="1.2.1" />
   </ItemGroup>
 
   <ItemGroup>

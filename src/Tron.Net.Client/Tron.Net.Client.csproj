@@ -1,27 +1,26 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>net45;net46;netstandard2.0</TargetFrameworks>
-    <Version>0.6.3</Version>
-    <Authors>griffo.io</Authors>
-    <Company>griffo.io</Company>
-    <Product>Tron.Net</Product>
-    <Copyright>griffo.io</Copyright>
-    <PackageLicenseUrl>https://www.gnu.org/licenses/lgpl-3.0.txt</PackageLicenseUrl>
+    <TargetFrameworks>netstandard2.0;netstandard2.1;net45;net46</TargetFrameworks>
+    <Version>0.7.0</Version>
+    <Authors>https://github.com/griffo-io</Authors>
+    <Company>https://github.com/griffo-io</Company>
+    <Product>Tron.Net.Client</Product>
+    <Copyright>https://github.com/griffo-io</Copyright>
+    <Description>Tron.Net.Protocol is a port in .NET standard of the Tron protocol</Description>
+    <LicenseUrl>https://raw.githubusercontent.com/griffo-io/tron.net/master/README.md</LicenseUrl>
     <PackageProjectUrl>https://github.com/griffo-io/tron.net</PackageProjectUrl>
-    <PackageIconUrl>https://raw.githubusercontent.com/griffo-io/tron.net/master/src/imgs/tron-logo.jpg</PackageIconUrl>
     <RepositoryUrl>https://github.com/griffo-io/tron.net</RepositoryUrl>
-    <PackageReleaseNotes>Updated Protocol reference</PackageReleaseNotes>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Grpc.Core" Version="1.13.1" />
+    <PackageReference Include="Grpc.Core" Version="2.26.0" />
+    <PackageReference Include="Tron.Net.Protocol" Version="3.6.6" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\Tron.Net.Common\Tron.Net.Common.csproj" />
     <ProjectReference Include="..\Tron.Net.Crypto\Tron.Net.Crypto.csproj" />
-    <ProjectReference Include="..\Tron.Net.Protocol\Tron.Net.Protocol.csproj" />
   </ItemGroup>
 
 </Project>

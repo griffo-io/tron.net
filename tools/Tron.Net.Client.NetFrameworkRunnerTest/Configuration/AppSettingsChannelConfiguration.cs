@@ -1,5 +1,4 @@
 ﻿using System;
-using System.IO;
 using Tron.Net.Client.Grpc.Configuration;
 
 namespace Tron.Net.Client.NetFrameworkRunnerTest.Configuration

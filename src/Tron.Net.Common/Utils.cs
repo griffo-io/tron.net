@@ -1,8 +1,8 @@
-﻿using System;
-using System.Text;
-
-namespace Tron.Net.Common
+﻿namespace Tron.Net.Common
 {
+    using System;
+    using System.Text;
+
     public static class Utils
     {
         public static string ToHexString(this byte[] bytes)

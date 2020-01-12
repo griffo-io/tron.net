@@ -1,10 +1,7 @@
-﻿using Grpc.Core;
-
-namespace Tron.Net.Client.Grpc
+﻿namespace Tron.Net.Client.Grpc
 {
     public interface IGrpcChannelFactory
     {
-        Channel Create();
-
+        global::Grpc.Core.Channel Create();
     }
 }

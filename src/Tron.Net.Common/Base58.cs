@@ -1,8 +1,8 @@
-﻿using System;
-using System.Text;
-
-namespace Tron.Net.Common
+﻿namespace Tron.Net.Common
 {
+    using System;
+    using System.Text;
+
     public static class Base58
     {
         public static readonly char[] Alphabet = "123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz".ToCharArray();

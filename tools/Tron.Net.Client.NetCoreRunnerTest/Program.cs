@@ -10,7 +10,7 @@ namespace Tron.Net.Client.NetCoreRunnerTest
         static void Main(string[] args)
         {
             var configuration = new JsonChannelConfiguration();
-            var grpcChanngelFactory = new GrpcGrpcChannelFactory(configuration);
+            var grpcChanngelFactory = new GrpcChannelFactory(configuration);
             var walletClientFactory = new WalletClientFactory(grpcChanngelFactory);
             var wallet = new Wallet(walletClientFactory, new AllClientsDefaultCallConfiguration());
 

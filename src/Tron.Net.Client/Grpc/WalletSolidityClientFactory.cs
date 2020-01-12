@@ -2,16 +2,16 @@
 {
     public class WalletSolidityClientFactory : IWalletSolidityClientFactory
     {
-        private readonly IGrpcChannelFactory _grpcChannelFactory;
+        private readonly IGrpcChannelFactory _channelFactory;
 
-        public WalletSolidityClientFactory(IGrpcChannelFactory grpcChannelFactory)
+        public WalletSolidityClientFactory(IGrpcChannelFactory channelFactory)
         {
-            _grpcChannelFactory = grpcChannelFactory;
+            _channelFactory = channelFactory;
         }
 
         public Protocol.WalletSolidity.WalletSolidityClient Create()
         {
-            return new Protocol.WalletSolidity.WalletSolidityClient(_grpcChannelFactory.Create());
+            return new Protocol.WalletSolidity.WalletSolidityClient(_channelFactory.Create());
         }
 
     }

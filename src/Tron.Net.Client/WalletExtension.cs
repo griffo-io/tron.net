@@ -1,11 +1,11 @@
-﻿using System.Threading;
-using System.Threading.Tasks;
-using Tron.Net.Client.Grpc;
-using Tron.Net.Client.Grpc.Configuration;
-using Tron.Net.Protocol;
-
-namespace Tron.Net.Client
+﻿namespace Tron.Net.Client
 {
+    using System.Threading;
+    using System.Threading.Tasks;
+    using Tron.Net.Client.Grpc;
+    using Tron.Net.Client.Grpc.Configuration;
+    using Tron.Net.Protocol;
+
     public class WalletExtension : IWalletExtension
     {
         private readonly IWalletExtensionClientFactory _clientFactory;
@@ -23,13 +23,13 @@ namespace Tron.Net.Client
             return _clientFactory.Create();
         }
 
-        public async Task<TransactionList> GetTransactionsFromThisAsync(AccountPaginated accountPagination, CancellationToken token = default(CancellationToken))
+        public async Task<TransactionList> GetTransactionsFromThisAsync(AccountPaginated accountPagination, CancellationToken token = default)
         {
             var walletExtension = GetWalletExtension();
             return await walletExtension.GetTransactionsFromThisAsync(accountPagination, _configuration.GetCallOptions(token));
         }
 
-        public async Task<TransactionList> GetTransactionsToThisAsync(AccountPaginated accountPagination, CancellationToken token = default(CancellationToken))
+        public async Task<TransactionList> GetTransactionsToThisAsync(AccountPaginated accountPagination, CancellationToken token = default)
         {
             var walletExtension = GetWalletExtension();
             return await walletExtension.GetTransactionsToThisAsync(accountPagination, _configuration.GetCallOptions(token));
