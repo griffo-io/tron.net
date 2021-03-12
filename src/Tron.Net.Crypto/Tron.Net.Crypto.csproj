@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFrameworks>net45;net46;netstandard2.0;netstandard2.1</TargetFrameworks>
-    <Version>0.7.0</Version>
+    <Version>0.7.1</Version>
     <Authors>griffo.io</Authors>
     <Company>griffo.io</Company>
     <Product>Tron.Net.Crypto</Product>
@@ -16,7 +16,6 @@
 
   <ItemGroup>
     <PackageReference Include="Portable.BouncyCastle" Version="1.8.5.2" />
-    <PackageReference Include="SHA3.Net" Version="1.2.1" />
   </ItemGroup>
 
   <ItemGroup>
@@ -25,10 +24,5 @@
     </ProjectReference>
   </ItemGroup>
 
-  <ItemGroup Condition="'$(TargetFramework)' == 'netstandard2.0'">
-    <PackageReference Include="SHA3">
-      <Version>1.0.0-rc</Version>
-    </PackageReference>
-  </ItemGroup>
 
 </Project>

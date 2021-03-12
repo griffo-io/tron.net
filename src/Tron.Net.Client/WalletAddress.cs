@@ -2,7 +2,6 @@
 {
     using System;
     using System.Linq;
-    using SHA3.Net;
     using Tron.Net.Common;
     using Tron.Net.Crypto;
 
@@ -54,7 +53,7 @@
                 throw new ArgumentNullException(nameof(key));
             }
 
-            Value = key.Pub.GetEncoded().ToArray();
+            Value = key.Pub.GetEncoded().Skip(1).ToArray();
             _addressPrefix = prefix;
         }
 
@@ -70,7 +69,7 @@
 
         public override string ToString()
         {
-            var sha3Hash = Sha3.Sha3256().ComputeHash(Value);
+            var sha3Hash = Kecccack.ComputeHash(Value);
             var sha3HashBytes = new byte[20];
             Array.Copy(sha3Hash, sha3Hash.Length - 20, sha3HashBytes, 0, 20);
             var address = _addressPrefix + sha3HashBytes.ToHexString();
